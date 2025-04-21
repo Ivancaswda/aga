@@ -75,7 +75,7 @@ export const getUserPlan = async (req, res) => {
         const activePlan = await planModel.find({userId, isActive:true})
         console.log(activePlan)
         console.log(plans)
-            res.json({success:true, plans})
+            res.json({success:true, plans, message: 'вы получили планы!'})
 
     } catch (error) {
         res.json({success:false, message:error.message})
